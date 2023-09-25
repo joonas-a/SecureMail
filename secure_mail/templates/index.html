@@ -1,9 +1,14 @@
 {% extends "base.html" %} {% block title %} Home {% endblock title %}
 
 {% block content %}
-<form action="logout/" method="POST">
+<!-- <form class="logout" action="logout/" method="POST">
   {% csrf_token %}
   <span>Logged in as {{user.username}}</span>
   <input type="submit" value="Logout" />
-</form>
+</form> -->
+
+<!-- add menu here for new message, and to messages -->
+<div class="selection">
+  <h3><a href="{% url 'messages' user.username %}">View your messages (secure)</a></h3>
+</div>
 {% endblock content %}

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>{% block title %}Secure Mail{% endblock title %}</title>
+    <title>{% block title %} Secure Mail {% endblock title %}</title>
     {% load static %}
     <link rel="stylesheet" href="{% static '/secure_mail/style.css' %}" />
   </head>
@@ -11,7 +11,17 @@
       <marquee class="mrq" behavior="alternate" direction="right">
         <h1 class="mainHeader">Secure Mail</h1>
       </marquee>
-      <div>{% block content %} {% endblock content %}</div>
+      {% if user.is_authenticated %}
+      <div class="navigation">
+        <form action="/logout/" method="POST" style="display: inline;">
+          {% csrf_token %}
+          <span>Logged in as {{user.username}}</span>
+          <input type="submit" value="Logout" />
+        </form>
+        <button style="display: inline;"><a href="{% url 'index' %}">Home</a></button>
+      </div>
+      {% endif %}
     </div>
+    {% block content %} {% endblock content %}
   </body>
 </html>

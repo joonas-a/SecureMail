@@ -1,20 +1,31 @@
+body {
+  padding: 10px 0px 10px 10px;
+  margin: 0 10%;
+  min-height: 100vh;
+  background-color: #cbffb3;
+}
 .mrq {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #7dffff;
+  padding: 20px;
+  background-color: #b7ffff;
   border-style: groove;
   border-width: 1px;
 }
-
 .mainHeader {
   font-size: 36px;
   margin-top: -5px;
   margin-bottom: -5px;
   font-variant: small-caps;
 }
-body {
-  padding: 10px 0px 10px 10px;
-  margin: 0 10%;
-  min-height: 100vh;
-  background-color: #cbffb3;
+.navigation {
+  border-style: ridge;
+  border-width: 2px;
+  border-color: black;
+  margin-top: 10px;
+  padding: 5px;
+}
+.message {
+  background-color: #d7ffff;
+  padding: 20px;
+  border-style: ridge;
+  border-radius: 15rem;
 }

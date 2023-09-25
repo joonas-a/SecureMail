@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block title %} Messages {% endblock title %}
+
+{% block content %}
+  {% if messages %}
+  <h2>Your messages</h2>
+    <ul style="padding-left: 0;">
+      {% for message in messages %}
+        {% if message.receiver == username %}
+          <div class="message">
+            <b>Message: </b>{{ message.content }}<br style="margin-bottom: 8px;"/>
+            <b>From: </b>{{ message.sender }}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% else %}
+    <h2>No messages found</h2>
+  {% endif %}
+{% endblock content %}
