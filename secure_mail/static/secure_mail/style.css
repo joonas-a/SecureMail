@@ -1,0 +1,20 @@
+.mrq {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #7dffff;
+  border-style: groove;
+  border-width: 1px;
+}
+
+.mainHeader {
+  font-size: 36px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  font-variant: small-caps;
+}
+body {
+  padding: 10px 0px 10px 10px;
+  margin: 0 10%;
+  min-height: 100vh;
+  background-color: #cbffb3;
+}

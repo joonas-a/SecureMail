@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}Secure Mail{% endblock title %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/secure_mail/style.css' %}" />
+  </head>
+  <body>
+    <div>
+      <marquee class="mrq" behavior="alternate" direction="right">
+        <h1 class="mainHeader">Secure Mail</h1>
+      </marquee>
+      <div>{% block content %} {% endblock content %}</div>
+    </div>
+  </body>
+</html>
