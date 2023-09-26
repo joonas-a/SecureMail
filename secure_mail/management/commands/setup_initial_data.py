@@ -14,7 +14,7 @@ class Command(BaseCommand):
         User.objects.all().delete()
         Message.objects.all().delete()
 
-        self.stdout.write("Generating new data ..")
+        self.stdout.write("Generating users ..")
         User.objects.create_user(username='secure', password='mailer')
         alice = User.objects.create_user(username='alice', password='redqueen')
         bob = User.objects.create_user(username='bob', password='sponge')
@@ -26,6 +26,8 @@ class Command(BaseCommand):
         Message.objects.create(sender=bob, receiver='alice',
                                content='Agreed, this must be the most secure messaging platform out there!')
         self.stdout.write("Done")
+        self.stdout.write(
+            "App can now be run with 'python3 manage.py runserver'")
 
 
 """
