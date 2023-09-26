@@ -16,15 +16,19 @@ class Command(BaseCommand):
 
         self.stdout.write("Generating users ..")
         User.objects.create_user(username='secure', password='mailer')
-        alice = User.objects.create_user(username='alice', password='redqueen')
-        bob = User.objects.create_user(username='bob', password='sponge')
+        User.objects.create_user(username='alice', password='redqueen')
+        User.objects.create_user(username='bob', password='sponge')
         self.stdout.write("Done")
 
         self.stdout.write("Generating messages ..")
-        Message.objects.create(sender=alice, receiver='bob',
+        Message.objects.create(sender='alice', receiver='bob',
                                content='Hello Bob! So glad our messages are safe.')
-        Message.objects.create(sender=bob, receiver='alice',
+        Message.objects.create(sender='bob', receiver='alice',
                                content='Agreed, this must be the most secure messaging platform out there!')
+        Message.objects.create(sender='secure', receiver='bob',
+                               content='Would you like to recommend our service to your colleagues? :)')
+        Message.objects.create(sender='bob', receiver='secure',
+                               content='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua')
         self.stdout.write("Done")
         self.stdout.write(
             "App can now be run with 'python3 manage.py runserver'")
