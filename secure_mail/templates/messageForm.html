@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block title %} New Message {% endblock title %}
+
+{% block content %}
+  <div>
+    <h2>Write your message</h2>
+    <form class="messageForm" method="post" action="/create/">
+      <label for="msg-recipient">Recipient</label><br />
+      <input type="text" name="recipient" id="msg-recipient" maxlength="50" required autofocus /><br />
+      <label for="msg-content">Content</label><br />
+      <textarea name="content" id="msg-content" rows="4" cols="50" maxlength="200" required></textarea><br />
+      <input type="submit" value="Send"/>
+    </form>
+  </div>
+{% endblock content %}

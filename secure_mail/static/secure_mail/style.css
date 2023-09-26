@@ -28,4 +28,14 @@ body {
   padding: 20px;
   border-style: ridge;
   border-radius: 15rem;
+  margin-bottom: 5px;
+}
+.messageForm {
+  background-color: azure;
+  padding: 10px;
+  border-color: black;
+  border-style: solid;
+}
+.messageForm input {
+  margin-bottom: 10px;
 }
