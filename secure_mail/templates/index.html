@@ -1,13 +1,6 @@
 {% extends "base.html" %} {% block title %} Home {% endblock title %}
 
 {% block content %}
-<!-- <form class="logout" action="logout/" method="POST">
-  {% csrf_token %}
-  <span>Logged in as {{user.username}}</span>
-  <input type="submit" value="Logout" />
-</form> -->
-
-<!-- add menu here for new message, and to messages -->
 <div class="selection">
   {% if messages %}
   <ul class="messages">
